@@ -1,0 +1,34 @@
+{
+  "name": "zenconfig",
+  "version": "1.0.0-beta",
+  "description": "Simple schema-based configuration for twelve-factor apps",
+  "homepage": "https://github.com/michaelhue/zenconfig",
+  "bugs": "https://github.com/michaelhue/zenconfig/issues",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/* | tap-spec"
+  },
+  "keywords": [
+    "config",
+    "configuration",
+    "env",
+    "environment"
+  ],
+  "author": {
+    "name": "Michael Hüneburg",
+    "email": "hello@michaelhue.com",
+    "url": "https://michaehue.co"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michaelhue/zenconfig"
+  },
+  "engines": {
+    "node": ">=6.0"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
+}
