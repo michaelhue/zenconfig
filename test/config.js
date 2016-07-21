@@ -24,8 +24,8 @@ test('options', t => {
     ROLES: ['admin', 'staff', 'user']
   }
 
-  t.plan(1)
   t.deepEqual(actual, expected, 'set options')
+  t.end()
 })
 
 test('missing options', t => {
@@ -37,8 +37,8 @@ test('missing options', t => {
     config(schema, {})
   }
 
-  t.plan(1)
   t.throws(expectThrow, UndefinedOptionError, 'throws error')
+  t.end()
 })
 
 test('defaults', t => {
@@ -50,11 +50,11 @@ test('defaults', t => {
   }
   let actual = config(schema, {})
 
-  t.plan(4)
   t.equal(actual.HOST, 'localhost', 'default string')
   t.equal(actual.PORT, 8080, 'default number')
   t.equal(actual.ENABLE, true, 'default boolean')
   t.deepEqual(actual.ROLES, ['admin', 'user'], 'default array')
+  t.end()
 })
 
 test('immutability', t => {
@@ -67,7 +67,7 @@ test('immutability', t => {
     obj.TEST = 'bar'
   }
 
-  t.plan(2)
   t.throws(strictIllegalAssign, TypeError, 'throw on strict illegal assign')
   t.deepEqual(obj, { TEST: 'foo' }, 'ignore write')
+  t.end()
 })

@@ -3,19 +3,16 @@ const config = require('../index')
 const { InvalidSchemaError } = config
 
 test('types exported', t => {
-  t.plan(4)
-
   t.equal(config.ARRAY, 'array', 'ARRAY')
   t.equal(config.BOOLEAN, 'boolean', 'BOOLEAN')
   t.equal(config.NUMBER, 'number', 'NUMBER')
   t.equal(config.STRING, 'string', 'STRING')
+  t.end()
 })
 
 test('string type conversion', t => {
   let actual, expected
   let schema = { TEST: { type: 'string' } }
-
-  t.plan(5)
 
   actual = config(schema, { TEST: 'foobar' })
   expected = { TEST: 'foobar' }
@@ -36,13 +33,13 @@ test('string type conversion', t => {
   actual = config(schema, { TEST: false })
   expected = { TEST: 'false' }
   t.deepEqual(actual, expected, 'string from boolean (false)')
+
+  t.end()
 })
 
 test('number type conversion', t => {
   let actual, expected
   let schema = { TEST: { type: 'number' } }
-
-  t.plan(5)
 
   actual = config(schema, { TEST: 1 })
   expected = { TEST: 1 }
@@ -63,6 +60,8 @@ test('number type conversion', t => {
   actual = config(schema, { TEST: false })
   expected = { TEST: 0 }
   t.deepEqual(actual, expected, 'number from boolean (false)')
+
+  t.end()
 })
 
 test('boolean type conversion', t => {
@@ -70,8 +69,6 @@ test('boolean type conversion', t => {
   let expectedTrue = { TEST: true }
   let expectedFalse = { TEST: false }
   let actual
-
-  t.plan(6)
 
   actual = config(schema, { TEST: true })
   t.deepEqual(actual, expectedTrue, 'boolean remains (true)')
@@ -90,13 +87,13 @@ test('boolean type conversion', t => {
 
   actual = config(schema, { TEST: 'false' })
   t.deepEqual(actual, expectedFalse, 'boolean from string (\'false\')')
+
+  t.end()
 })
 
 test('array type conversion', t => {
   let actual, expected
   let schema = { TEST: { type: 'array' } }
-
-  t.plan(2)
 
   actual = config(schema, { TEST: 'foo,bar,baz' })
   expected = { TEST: ['foo', 'bar', 'baz'] }
@@ -105,12 +102,14 @@ test('array type conversion', t => {
   actual = config(schema, { TEST: ' foo, bar ,baz  ' })
   expected = { TEST: ['foo', 'bar', 'baz'] }
   t.deepEqual(actual, expected, 'trimmed values')
+
+  t.end()
 })
 
 test('invalid type conversion', t  => {
   let schema = { TEST: { type: 'unknown' } }
   let op = () => config(schema, { TEST: null })
 
-  t.plan(1)
   t.throws(op, InvalidSchemaError, 'throws exception')
+  t.end()
 })
