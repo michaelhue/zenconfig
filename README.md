@@ -4,6 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/zenconfig.svg?style=flat-square)](https://www.npmjs.com/package/zenconfig)
 [![Travis](https://img.shields.io/travis/michaelhue/zenconfig.svg?style=flat-square)](https://travis-ci.org/michaelhue/zenconfig)
+[![Code Climate](https://img.shields.io/codeclimate/github/michaelhue/zenconfig.svg?style=flat-square)](https://codeclimate.com/github/michaelhue/zenconfig)
 ![dependencies](https://img.shields.io/david/michaelhue/zenconfig.svg?style=flat-square)
 [![license](https://img.shields.io/github/license/michaelhue/zenconfig.svg?style=flat-square)](./LICENSE)
 
