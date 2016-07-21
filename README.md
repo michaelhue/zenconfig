@@ -2,7 +2,8 @@
 
 > Simple schema-based configuration for twelve-factor apps
 
-[![Travis](https://img.shields.io/travis/michaelhue/zenconfig.svg?maxAge=2592000)](https://travis-ci.org/michaelhue/zenconfig)
+[![Travis](https://img.shields.io/travis/michaelhue/zenconfig.svg?maxAge=2592000&style=flat-square)](https://travis-ci.org/michaelhue/zenconfig)
+[![license](https://img.shields.io/github/license/michaelhue/zenconfig.svg?maxAge=2592000&style=flat-square)](./LICENSE)
 
 _Note: this package is currently in beta._
 
