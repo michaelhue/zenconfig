@@ -2,10 +2,10 @@
 
 > Simple schema-based configuration for [twelve-factor](https://12factor.net) apps
 
-[![npm](https://img.shields.io/npm/v/zenconfig.svg?maxAge=2592000&style=flat-square)](https://www.npmjs.com/package/zenconfig)
-[![Travis](https://img.shields.io/travis/michaelhue/zenconfig.svg?maxAge=2592000&style=flat-square)](https://travis-ci.org/michaelhue/zenconfig)
-![dependencies](https://img.shields.io/david/michaelhue/zenconfig.svg?maxAge=2592000&style=flat-square)
-[![license](https://img.shields.io/github/license/michaelhue/zenconfig.svg?maxAge=2592000&style=flat-square)](./LICENSE)
+[![npm](https://img.shields.io/npm/v/zenconfig.svg?style=flat-square)](https://www.npmjs.com/package/zenconfig)
+[![Travis](https://img.shields.io/travis/michaelhue/zenconfig.svg?style=flat-square)](https://travis-ci.org/michaelhue/zenconfig)
+![dependencies](https://img.shields.io/david/michaelhue/zenconfig.svg?style=flat-square)
+[![license](https://img.shields.io/github/license/michaelhue/zenconfig.svg?style=flat-square)](./LICENSE)
 
 _Note: this package is currently in beta._
 
