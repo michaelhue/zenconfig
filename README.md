@@ -17,30 +17,34 @@ _Note: this package is currently in beta._
 
 ## Install
 
-    npm install zenconfig
+```bash
+npm install zenconfig
+```
 
 
 ## Usage
 
-    const zenconfig = require('zenconfig')
-    
-    // Define configuration schema
-    const schema = {
-      "NODE_ENV": {
-        "type": "string",
-        "default": "development"
-      },
-      "PORT": {
-        "type": "number",
-        "default": 8080
-      },
-      "HOST": {
-        "type": "string"
-      }
+```js
+  const zenconfig = require('zenconfig')
+  
+  // Define configuration schema
+  const schema = {
+    "NODE_ENV": {
+      "type": "string",
+      "default": "development"
+    },
+    "PORT": {
+      "type": "number",
+      "default": 8080
+    },
+    "HOST": {
+      "type": "string"
     }
-    
-    // Create immutable configuration from environment
-    const config = zenconfig(schema, process.env)
+  }
+  
+  // Create immutable configuration from environment
+  const config = zenconfig(schema, process.env)
+```
 
 
 ## License
