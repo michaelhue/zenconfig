@@ -67,13 +67,7 @@ test('immutability', t => {
     obj.TEST = 'bar'
   }
 
-  // simulate non-strict assignment
-  function normalIllegalAssign () {
-    try { obj.TEST = 'bar' } catch (e) {}
-  }
-
-  t.plan(3)
+  t.plan(2)
   t.throws(strictIllegalAssign, TypeError, 'throw on strict illegal assign')
-  t.doesNotThrow(normalIllegalAssign, TypeError, 'don\'t throw on normal illegal assign')
   t.deepEqual(obj, { TEST: 'foo' }, 'ignore write')
 })
