@@ -1,6 +1,6 @@
 test/
 .editorconfig
-.eslintrc
+.eslintrc*
 .gitignore
 .npmignore
 .travis.yml
