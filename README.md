@@ -4,6 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/zenconfig.svg?style=flat-square)](https://www.npmjs.com/package/zenconfig)
 [![Travis](https://img.shields.io/travis/michaelhue/zenconfig.svg?style=flat-square)](https://travis-ci.org/michaelhue/zenconfig)
+[![Codecov](https://img.shields.io/codecov/c/github/michaelhue/zenconfig.svg?style=flat-square)](https://codecov.io/gh/michaelhue/zenconfig)
 [![Code Climate](https://img.shields.io/codeclimate/github/michaelhue/zenconfig.svg?style=flat-square)](https://codeclimate.com/github/michaelhue/zenconfig)
 ![dependencies](https://img.shields.io/david/michaelhue/zenconfig.svg?style=flat-square)
 [![license](https://img.shields.io/github/license/michaelhue/zenconfig.svg?style=flat-square)](./LICENSE)
@@ -13,10 +14,10 @@ _Note: this package is currently in beta._
 
 ## Features
 
-- **[12-factor](https://12factor.net/config) ready:** encourages portable configuration via environment vars
-- **Schema-based:** define options via json compatible schema
+- **12-factor ready:** encourages portable [configuration](https://12factor.net/config) via environment vars
+- **Schema based:** define options via json compatible schema
+- **Independent**: look ma, no dependencies
 - **Immutable:** creates a read-only config object for your sanity 
-
 
 ## Install
 
