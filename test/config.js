@@ -1,4 +1,6 @@
-const test = require('tape')
+'use strict';
+
+const { test } = require('tap')
 const config = require('../index')
 const { UndefinedOptionError } = config
 
@@ -24,8 +26,8 @@ test('options', t => {
     ROLES: ['admin', 'staff', 'user']
   }
 
-  t.plan(1)
   t.deepEqual(actual, expected, 'set options')
+  t.end()
 })
 
 test('missing options', t => {
@@ -37,8 +39,8 @@ test('missing options', t => {
     config(schema, {})
   }
 
-  t.plan(1)
   t.throws(expectThrow, UndefinedOptionError, 'throws error')
+  t.end()
 })
 
 test('defaults', t => {
@@ -50,30 +52,19 @@ test('defaults', t => {
   }
   let actual = config(schema, {})
 
-  t.plan(4)
   t.equal(actual.HOST, 'localhost', 'default string')
   t.equal(actual.PORT, 8080, 'default number')
   t.equal(actual.ENABLE, true, 'default boolean')
   t.deepEqual(actual.ROLES, ['admin', 'user'], 'default array')
+  t.end()
 })
 
-test('immutability', t => {
+test('config object', t => {
   let schema = { TEST: { type: 'string' } }
   let obj = config(schema, { TEST: 'foo' })
 
-  // simulate strict assignment
-  function strictIllegalAssign () {
-    'use strict';
-    obj.TEST = 'bar'
-  }
-
-  // simulate non-strict assignment
-  function normalIllegalAssign () {
-    try { obj.TEST = 'bar' } catch (e) {}
-  }
-
-  t.plan(3)
-  t.throws(strictIllegalAssign, TypeError, 'throw on strict illegal assign')
-  t.doesNotThrow(normalIllegalAssign, TypeError, 'don\'t throw on normal illegal assign')
-  t.deepEqual(obj, { TEST: 'foo' }, 'ignore write')
+  t.ok(!Object.isExtensible(obj), 'is not extensible')
+  t.ok(Object.isFrozen(obj), 'is frozen')
+  t.ok(obj.propertyIsEnumerable('TEST'), 'is enumerable')
+  t.end()
 })
