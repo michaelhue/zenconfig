@@ -59,17 +59,12 @@ test('defaults', t => {
   t.end()
 })
 
-test('immutability', t => {
+test('config object', t => {
   let schema = { TEST: { type: 'string' } }
   let obj = config(schema, { TEST: 'foo' })
 
-  // simulate strict assignment
-  function strictIllegalAssign () {
-    'use strict';
-    obj.TEST = 'bar'
-  }
-
-  t.throws(strictIllegalAssign, TypeError, 'throw on strict illegal assign')
-  t.deepEqual(obj, { TEST: 'foo' }, 'ignore write')
+  t.ok(!Object.isExtensible(obj), 'is not extensible')
+  t.ok(Object.isFrozen(obj), 'is frozen')
+  t.ok(obj.propertyIsEnumerable('TEST'), 'is enumerable')
   t.end()
 })
