@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "pre-commit": "npm run -s lint && tap --reporter=dot test/*",
     "test": "tap --reporter=spec --coverage-report=text-summary test/*",
-    "test-cov": "tap ---coverage-report=lcov test/*"
+    "test-cov": "tap --coverage-report=lcov"
   },
   "keywords": [
     "config",

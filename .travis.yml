@@ -3,5 +3,5 @@ node_js:
   - "node"
   - "6"
 after_success:
-  - npm run -s test-cov
-  - bash <(curl -s https://codecov.io/bash)
+  - npm install -gq codecov
+  - npm run -s test-cov | codecov
