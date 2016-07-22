@@ -1,6 +1,6 @@
 {
   "name": "zenconfig",
-  "version": "1.0.0-beta",
+  "version": "1.0.0-beta.0",
   "description": "Simple schema-based configuration for twelve-factor apps",
   "homepage": "https://github.com/michaelhue/zenconfig",
   "bugs": "https://github.com/michaelhue/zenconfig/issues",
