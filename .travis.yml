@@ -2,7 +2,3 @@ language: node_js
 node_js:
   - "node"
   - "6"
-script:
-  - "npm run -s lint"
-  - "npm test"
-  - "npm run -s test-cov"
