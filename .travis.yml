@@ -4,4 +4,4 @@ node_js:
   - "6"
 after_success:
   - npm install -gq codecov
-  - ./node_modules/.bin/tap --coverage-report=text-lcov | codecov
+  - ./node_modules/.bin/tap --coverage-report=text-lcov > coverage.lcov && codecov
