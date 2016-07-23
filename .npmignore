@@ -1,6 +1,6 @@
 .nyc_output/
 coverage/
-lib/*_test.js
+lib/*.test.js
 .editorconfig
 .eslintrc*
 .gitignore
