@@ -8,8 +8,10 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "pre-commit": "npm run -s lint && tap test/*",
-    "test": "tap --reporter=spec --coverage-report=text-summary test/*"
+    "pre-commit": "npm run lint && npm run test-cov",
+    "test": "tap lib/*_test.js",
+    "test-cov": "npm test -- --check-coverage --lines=100",
+    "test-lcov": "npm test -- --coverage-report=lcov"
   },
   "keywords": [
     "config",

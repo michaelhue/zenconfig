@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - "node"
   - "6"
+script:
+  - npm run lint
+  - npm run test-cov
 after_success:
   - npm install -gq codecov
-  - ./node_modules/.bin/tap --coverage-report=text-lcov > coverage.lcov && codecov
+  - npm run test-lcov && codecov < coverage/lcov.info
