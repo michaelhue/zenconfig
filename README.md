@@ -5,7 +5,7 @@
 [![npm](https://img.shields.io/npm/v/zenconfig.svg)](https://www.npmjs.com/package/zenconfig)
 [![Travis](https://img.shields.io/travis/michaelhue/zenconfig.svg)](https://travis-ci.org/michaelhue/zenconfig)
 [![Codecov](https://img.shields.io/codecov/c/github/michaelhue/zenconfig.svg)](https://codecov.io/gh/michaelhue/zenconfig)
-![dependencies](https://img.shields.io/david/michaelhue/zenconfig.svg?style=flat-square)
+![dependencies](https://img.shields.io/david/michaelhue/zenconfig.svg)
 [![license](https://img.shields.io/github/license/michaelhue/zenconfig.svg)](./LICENSE)
 
 _Note: this package is currently in beta._
