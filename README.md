@@ -157,6 +157,12 @@ try {
 ```
 
 
+## Caveats
+
+- **No nested keys.** zenconfig aims to create a 1:1 relationship between configuration and your environment variables, so it creates flat key/value objects. Use prefixes and underscores to group your options, like `DB_HOST` or `FACEBOOK_API_KEY`. 
+- **Unforgiving.** zenconfig throws errors if the provided schema is invalid or a required option turns up undefined. In most cases your configuration is tightly coupled to your app; missing config values are a big deal.
+
+
 ## License
 
 This software is released under the MIT license, see [LICENSE](./LICENSE).
