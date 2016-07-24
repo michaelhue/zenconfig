@@ -6,4 +6,3 @@ lib/*.test.js
 .gitignore
 .npmignore
 .travis.yml
-README.md
